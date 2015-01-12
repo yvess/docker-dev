@@ -2,7 +2,6 @@ FROM dockerfile/ubuntu
 MAINTAINER Yves Serrano <y@yas.ch>
 
 RUN apt-get update && apt-get install -yq \
-        nodejs \
         mercurial \
         autoconf \
         libreadline-dev \
@@ -21,5 +20,4 @@ RUN apt-get update && apt-get install -yq \
         libjpeg-dev \
         liblcms2-dev \
         libpq-dev && \
-    curl -sL https://deb.nodesource.com/setup | sudo bash - && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
